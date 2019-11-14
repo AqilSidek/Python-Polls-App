@@ -1,0 +1,5 @@
+/* list items with anchor tags */
+li a {
+    font-size: 20px;
+    color: blue;
+}

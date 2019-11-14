@@ -1,0 +1,20 @@
+{% extends 'polls/base.html' %}
+
+{% block main_content %}
+
+<!-- if statements -->
+{% if latest_questions %}
+    <!-- for loop -->
+    {% for question in latest_questions %}
+        <ul><li>
+            <a href={% url "polls:detail" question.id %} ><b>{{question.question_text}}</b></a>
+        </li></ul>
+        <!-- will return each question's text, & in bold -->
+    {% endfor %}
+
+{% else %}
+    <p>You don't have any questions. Please add some.</p>
+{% endif %}
+<!-- end of if statements -->
+
+{% endblock %}
